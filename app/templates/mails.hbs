@@ -1,0 +1,13 @@
+<section class="mails-list-container">
+	<ul class="mails-list">
+	 {{#each model}}
+	 	<li class="mail-item">
+	 		{{#link-to 'mail' this classNames="mail-link"}}
+	 			<h3>{{this.subject}}</h3>
+	 			<p>{{this.from}}</p>
+	 		{{/link-to}}
+	 	</li>
+	  {{/each}}
+	</ul>
+</section>
+{{outlet}}

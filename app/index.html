@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Yeoman Ember Starter Kit</title>
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- endbuild -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- build:js scripts/header.js -->
+        <script src="bower_components/foundation/js/vendor/modernizr.js"></script>
+        <!-- endbuild -->
+</head>
+    <body>
+        <!-- build:js(app) scripts/components.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/handlebars/handlebars.runtime.js"></script>
+        <script src="@@ember"></script>
+        <script src="@@ember_data"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/templates.js -->
+        <script src="scripts/compiled-templates.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/main.js -->
+        <script src="scripts/combined-scripts.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/foundation/js/vendor/fastclick.js"></script>
+        <script src="bower_components/foundation/js/foundation.min.js"></script>
+        <!-- TODO: THIS IS INCLUDING ALL FOUNDATION JAVASCRIPTS !!!  -->
+        <!-- endbuild -->
+
+        <script>$(document).foundation();</script>
+</body>
+</html>

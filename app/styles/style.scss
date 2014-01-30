@@ -1,0 +1,107 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+@import "foundation-imports";
+
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
+
+$menu-width: 200px;
+.mails-list-container {
+	width: $menu-width;
+	padding: 0;
+	background: rgb(77,90,110);
+	height: 100%;
+	float: left;
+	margin: 0;
+	overflow: scroll;
+}
+
+.mails-list {
+	margin: 0;
+	list-style-type: none;
+}
+.mail-item {
+	overflow: hidden;
+	
+	
+	.mail-link {
+		padding: 10px;
+		display: block;
+		border-bottom: 1px solid rgb(93, 104, 121);
+	}
+
+
+	&:hover {
+		background: darken(rgb(77,90,110), 5%);
+	}
+
+	h3 {
+		font-size: 14px;
+		color: rgb(230,230,230);
+	}
+	p {
+		font-size: 12px;
+		margin-bottom: 0;
+		color: rgb(230,230,230);
+	}
+}
+
+.mail-header {
+	display: block;
+	overflow: hidden;
+	padding: 10px;
+	background: rgb(249, 250, 251);
+	border-bottom: 1px solid rgb(232, 235, 241);
+	p {
+		font-size: 14px;
+		color: rgb(194, 200, 208);	
+		line-height: 100%;
+		margin-bottom: 10px;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+	strong {
+		color: rgb(95, 106, 124);
+	}
+
+	.sender-photo {
+		float: left;
+		width: 38px;
+		margin-right: 10px;
+		border-radius: 19px;
+	}
+
+	.mail-details {
+		float: left;
+	}
+}
+
+.mail-content {
+	display: block;
+	padding: 10px 80px 10px 20px;
+	background: white;
+	color: rgb(156, 165, 179);
+	p {
+		font-size: 14px;	
+	}
+}
+
+.mail-container {
+	height: 100%;
+	float: left;
+	@include calc(width, "100% - 200px");
+}
+
+.edit-mail-container {
+	float: left;
+}
+
+html, body, .ember-view {
+    height:100%;
+}

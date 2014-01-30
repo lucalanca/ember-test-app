@@ -1,0 +1,13 @@
+<section class="mail-container">
+  <section class="mail-header">
+    <img class="sender-photo"{{bindAttr src="photo_url"}} />
+    <div class="mail-details">
+      <p><strong>{{model.subject}}</strong></p>
+      <p>From: <strong>{{model.from}}</strong></p>
+    </div>
+  </section>
+  <section class="mail-content">
+    {{{model.content}}}
+  </section>
+</section>
+{{outlet}}
