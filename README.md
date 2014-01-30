@@ -16,3 +16,8 @@ mail-cube
 > grunt serve
 
 TODO: will try *gulp* in the future.
+
+Open address:
+> http://localhost:9000/#/mails/
+
+
